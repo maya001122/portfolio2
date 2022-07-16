@@ -1,0 +1,40 @@
+.tabList > header ul li > a, .tabList > header ul li {
+  display: block;
+  text-decoration: none;
+}
+
+.lineHeightA {
+  padding: 10px;
+}
+
+.lineHeightB {
+  padding: 24px;
+}
+
+.lineHeightC {
+  padding: 20px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.tabList > header ul {
+  list-style: none;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+.tabList > header ul li {
+  display: inline-block;
+  font-size: 16px;
+  width: 16.6666666667%;
+}
+.tabList > header ul li > a {
+  width: 100%;
+  height: 20px;
+}
+.tabList > div {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
