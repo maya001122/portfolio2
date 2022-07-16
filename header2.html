@@ -1,0 +1,112 @@
+
+<script>
+	// 手機版選單
+	$(".menu_btn").click(function(){
+		var curDl = $('.header_mb'),
+			curHeight = curDl.height(),
+			autoHeight = curDl.css('height', 'auto').height(); 
+		
+		if(!curHeight){
+			curDl.height(curHeight).animate({height: autoHeight}, 400, function() {
+			curDl.css('height', 'auto'); 
+			});
+		}else
+			curDl.animate({height: '0px'},400);
+	});
+
+	// 錨點滑動
+	$('.nav ul li').click(function(){
+		var n = $(this).index();
+		var nn = n+1;
+		var sss = '#section0';
+		$('html,body').animate({scrollTop:$(sss+nn).offset().top}, 900); 
+	});
+	// 錨點滑動 手機版
+	$('.nav2 ul li').click(function(){
+		var n = $(this).index();
+		var nn = n+1;
+		var sss = '#section0';
+		$('html,body').animate({scrollTop:$(sss+nn).offset().top}, 900); 
+	});
+
+	// menu_btn
+	var Menu = {
+		el: {
+		ham: $('.m_btn'),
+		menuTop: $('.btn_top'),
+		menuMiddle: $('.btn_middle'),
+		menuBottom: $('.btn_bottom')
+		},
+		
+		init: function() {
+		Menu.bindUIactions();
+		},
+		
+		bindUIactions: function() {
+		Menu.el.ham
+			.on(
+				'click',
+			function(event) {
+			Menu.activateMenu(event);
+			event.preventDefault();
+			}
+		);
+		},
+		
+		activateMenu: function() {
+		Menu.el.menuTop.toggleClass('btn_top_click');
+		Menu.el.menuMiddle.toggleClass('btn_middle_click');
+		Menu.el.menuBottom.toggleClass('btn_bottom_click'); 
+		}
+	};
+	Menu.init();
+</script>
+
+<!--PC版選單-->
+<div class="header">
+	<div class="header_bor">
+		<div class="logo_md">
+			<a href="index.html" class="logo">Maya'sportfolio</a>
+		</div>
+	</div>
+</div>
+
+<!--手機版選單-->
+<div class="header2">
+	<div class="header_cont">
+		<div class="m_nav_header">
+		
+			<!--logo-mb-->
+			<div class="logo_mb_w">
+				<a href="index.html" class="logo">Maya'sportfolio</a>
+			</div>
+
+			<div class="m_btn">
+				<a class="menu_btn" href="javascript:void(0);">
+					<span class="btn_global btn_top"></span>
+					<span class="btn_global btn_middle"></span>
+					<span class="btn_global btn_bottom"></span>
+				</a>
+			</div>
+			
+		</div>
+		
+		<div class="header_mb">
+			<div class="nav2">
+				<ul class="top_menu">
+					<li><a class="nav-mb" href="cases_001.html">THERMOS膳魔師官方購物網站</a></li>
+					<li><a class="nav-mb" href="cases_002.html">alfi 台灣官方網站</a></li>
+					<li><a class="nav-mb" href="cases_003.html">臺北市融資貸款申辦網</a></li>
+					<li><a class="nav-mb" href="cases_004.html">遠流智慧藏</a></li>
+					<li><a class="nav-mb" href="cases_005.html">跟著蔡阿嘎去機場</a></li>
+					<li><a class="nav-mb" href="cases_006.html">讀書共和國閱讀護照</a></li>
+					<li><a class="nav-mb" href="cases_007.html">QQ卡APP</a></li>
+					<li><a class="nav-mb" href="cases_008.html">工商時報APP</a></li>
+					<li><a class="nav-mb" href="cases_009.html">上海鄉村</a></li>
+					<li><a class="nav-mb" href="cases_010.html">鉅虹建設</a></li>
+					<li><a class="back_btn" href="index.html">回首頁</a></li>
+				</ul>
+			</div>         
+		</div>
+	</div>
+</div>
